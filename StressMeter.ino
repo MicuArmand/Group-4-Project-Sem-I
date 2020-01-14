@@ -89,7 +89,7 @@ void loop() {
   }
 
   
-  if(millis()-last_read_GSR>=10)                   /// Read a new GSR value only every 5ms, and it adds it to the sum. Ok increases by one to signify that 1 reading has been stored.
+  if(millis()-last_read_GSR>=10)                   /// Read a new GSR value only every 10ms, and it adds it to the sum. Ok increases by one to signify that 1 reading has been stored.
   {
     gsr_0_value=analogRead(GSR_0);                /// Read first GSR value and add it to the sum
     sum_0 += gsr_0_value;
