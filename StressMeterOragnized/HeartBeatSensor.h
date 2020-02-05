@@ -1,4 +1,4 @@
-#define HBS A2
+#define HBS A1
 const int THRESHOLD = 450;              /// Threshold of the HBS analog reading. This is used to find an actual pulse. If there is too much noise, adjust the value from here.
 
 int beatTimeOld = 0;                    /// This variable holds the time of a last-read heartbeat
@@ -19,6 +19,8 @@ float bpmAverage[3];                    /// Because having only the "BPM" variab
 int index = 0;                          /// I decided to include an array of 3 averages to average AGAIN, and a index to keep overwriting new values of different positions of the vector
 int avg = 0;                            /// avg = (bpmAverage[0] + bpmAverage[1] + bpmAverage[2]) / 3
 int count = 0;                          /// Counts how many heartbeats have happened
+
+float deltaDiffHBS=0.0;                 /// The differance in percentage between the baseline value and the actual value
 
 void heartbeat_find(){
  
@@ -55,5 +57,7 @@ void heartbeat_show(){
       lcd_print_bpm(avg);                             /// PROBLEM             
 
       index = (index + 1) % 3;
+
+      deltaDiffHBS=((avg/60)-1) * 100;
     }
 }
