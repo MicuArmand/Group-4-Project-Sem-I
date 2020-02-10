@@ -20,9 +20,12 @@ void led_checkup(){
   delay(1000);
   analogWrite(redLED, 70);
   delay(1000);
+  digitalWrite(12, HIGH);
+  delay(1000);
   digitalWrite(greenLED, LOW);
   digitalWrite(yellowLED, LOW);
   digitalWrite(redLED, LOW);
+  digitalWrite(12, LOW);
   
   }
 
@@ -37,7 +40,7 @@ void setup() {
   pinMode(redLED, OUTPUT);
   
 
-  Entropy.initialize();
+  Entropy.initialize();                   /// Initialize "Random" library
   
   lastReadGSR = millis();
 

@@ -113,7 +113,7 @@ void lcd_next_round()
 
 void lcd_right_answer(){
 
-  for(int i=0; i<5; i++){
+  for(int i=0; i<8; i++){
   lcd.clear();
   lcd.print("     MISSLE");
   lcd.setCursor(0,1);
@@ -136,7 +136,8 @@ void lcd_end_game(){
 
 void lcd_wrong_answer(){
 
-  for(int i=0; i<5; i++){
+  tone(8, 1000, 500);
+  for(int i=0; i<8; i++){
   lcd.clear();
   lcd.print("      CITY");
   lcd.setCursor(0,1);

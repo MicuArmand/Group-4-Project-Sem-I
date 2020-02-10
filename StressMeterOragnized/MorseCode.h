@@ -2,9 +2,9 @@
 #include <cww_MorseTx.h>                  /// Library for the morse code
 
 #define CW_SPEED 12
-#define PIN_LED 9
+#define PIN_LED 12
 #define PIN_SND 8
-#define TONE_FREQ 4000
+#define TONE_FREQ 3000
 
 // Construct a cww_MorseTx instance that will send Morse Code at 15 words
 // per minute on I/O pin 2. Output is active HIGH.
@@ -15,102 +15,133 @@ int number;                                     /// Variable to store a random n
 
 void morse_send_word1(int level) {
   Serial.println("WORD 1");
+  tone(8, 2000, 500);
+  delay(3000);
   if(level==1)
-    morse.send("G    O    R    F");
+    morse.send("M    A    E    T");
   if(level==2)
-    morse.send("E   S   A   B");
+    morse.send("Y   E   R   P");
   if(level==3)
-    morse.send("L  L  I  K");
+    morse.send("S  R  A  L");
+   tone(8, 2000, 500);
 }
 
 void morse_send_word2(int level) {
   Serial.println("WORD 2");
+  tone(8, 2000, 500);
+  delay(3000);
   if(level==1)
-    morse.send("D    R    I    B");
+    morse.send("E    M    O    S");
   if(level==2)
-    morse.send("K   S   A   M");
+    morse.send("R   E   T   A   W");
   if(level==3)
-    morse.send("S  N  U  G");
+    morse.send("Y  R  F");
+
+   tone(8, 2000, 500);
 }
 
 void morse_send_word3(int level) {
   Serial.println("WORD 3");
+  tone(8, 2000, 500);
+  delay(3000);
   if(level==1)
-    morse.send("K    R    A    D");
+    morse.send("T    X    E    N");
   if(level==2)
-    morse.send("P   M   A   C");
+    morse.send("E   N   I   M");
   if(level==3)
-    morse.send("A  E  R  A");
+    morse.send("E  S  A  B");
+   tone(8, 2000, 500);
 }
 
 void morse_send_word4(int level) {
   Serial.println("WORD 4");
+  tone(8, 2000, 500);
+  delay(3000);
   if(level==1)
-    morse.send("G    N    I    R    ");
+    morse.send("E    N    O    Z");
   if(level==2)
-    morse.send("L   L   E   H");
+    morse.send("A   Z   I   L");
   if(level==3)
     morse.send("B  M  O  B");
+   tone(8, 2000, 500);
 }
 
 void morse_send_word5(int level) {
   Serial.println("WORD 5");
+  tone(8, 2000, 500);
+  delay(3000);
   if(level==1)
-    morse.send("N    O    I    L");
+    morse.send("E    T    Y    B");
   if(level==2)
-    morse.send("T   S   E   T");
+    morse.send("E   M   A   T");
   if(level==3)
-    morse.send("K  E  E  S");
+    morse.send("E  R  I  F");
+   tone(8, 2000, 500);
 }
 
 void morse_send_word6(int level) {
   Serial.println("WORD 6");
+  tone(8, 2000, 500);
+  delay(3000);
   if(level==1)
-    morse.send("K    R    A    D");
+    morse.send("N    O    O    M");
   if(level==2)
-    morse.send("D   U   O   L");
+    morse.send("D   N   O   U   S");
   if(level==3)
-    morse.send("E  R  I  W");
+    morse.send("A  N  E  L");
+   tone(8, 2000, 500);
 }
 
 void morse_send_word7(int level) {
   Serial.println("WORD 7");
+  tone(8, 2000, 500);
+  delay(3000);
   if(level==1)
-    morse.send("N    I    A    P");
+    morse.send("O    G    N    A    M");
   if(level==2)
-    morse.send("K   C   E   D");
+    morse.send("N   O   O   N");
   if(level==3)
-    morse.send("G  N  I  K");
+    morse.send("E  T  I  R  W");
+   tone(8, 2000, 500);
 } 
 
 void morse_send_word8(int level) {
   Serial.println("WORD 8");
+  tone(8, 2000, 500);
+  delay(3000);
   if(level==1)
-    morse.send("E    V    A    S");
+    morse.send("W    A    R    D");
   if(level==2)
-    morse.send("S   D   D   A");
+    morse.send("T   A   E   M");
   if(level==3)
-    morse.send("W  E  R  C");
+    morse.send("T  A   E   N");
+   tone(8, 2000, 500);
 }
 
 void morse_send_word9(int level) {
   Serial.println("WORD 9");
+  tone(8, 2000, 500);
+  delay(3000);
   if(level==1)
-    morse.send("S    M    R    A");
+    morse.send("N    A    M    T    N    A");
   if(level==2)
-    morse.send("N   I   A   R");
+    morse.send("E   M   I   T");
   if(level==3)
-    morse.send("T  I  D  E");
+    morse.send("R  U  O  S");
+   tone(8, 2000, 500);
 }
 
 void morse_send_word10(int level) {
   Serial.println("WORD 10");
+  tone(8, 2000, 500);
+  delay(3000);
   if(level==1)
-    morse.send("R    A    E    F");
+    morse.send("E    T    U    N    I    M");
   if(level==2)
-    morse.send("T   S   I   F");
+    morse.send("G   N   I   X   O   B");
   if(level==3)
-    morse.send("E  R  I  F");
+    morse.send("V  A  E  N");
+   tone(8, 2000, 500);
 }
 
 void (*functionPointer[])(int level) = {morse_send_word1, morse_send_word2, morse_send_word3, 
